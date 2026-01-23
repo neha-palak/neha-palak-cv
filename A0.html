@@ -26,9 +26,12 @@
       natural facial proportions.
     </p>
 
-    <button onclick="vote('p1', 1)">👍</button>
-    <button onclick="vote('p1', -1)">👎</button>
-    <span id="p1">0</span>
+    <button onclick="vote('p1', 'like')">👍</button>
+    <span id="p1_like">0</span>
+    
+    <button onclick="vote('p1', 'dislike')">👎</button>
+    <span id="p1_dislike">0</span>
+
   </section>
 
   <hr>
@@ -46,9 +49,12 @@
       depth variation becomes more pronounced, making the scene appear less compressed.
     </p>
 
-    <button onclick="vote('p2', 1)">👍</button>
-    <button onclick="vote('p2', -1)">👎</button>
-    <span id="p2">0</span>
+    <button onclick="vote('p2', 'like')">👍</button>
+    <span id="p2_like">0</span>
+    
+    <button onclick="vote('p2', 'dislike')">👎</button>
+    <span id="p2_dislike">0</span>
+
   </section>
 
   <hr>
@@ -66,10 +72,13 @@
       and zooming in, causing parallel edges to remain parallel.
       Red lines highlight this difference.
     </p>
+    
+    <button onclick="vote('p3', 'like')">👍</button>
+    <span id="p3_like">0</span>
+    
+    <button onclick="vote('p3', 'dislike')">👎</button>
+    <span id="p3_dislike">0</span>
 
-    <button onclick="vote('p3', 1)">👍</button>
-    <button onclick="vote('p3', -1)">👎</button>
-    <span id="p3">0</span>
   </section>
 
   <script src="script.js"></script>
