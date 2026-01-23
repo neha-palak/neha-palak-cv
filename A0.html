@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Computer Vision Assignment 0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Computer Vision – Assignment 0</h1>
+  <p><strong>Name:</strong> Neha Palak</p>
+  <p><strong>Course:</strong> Computer Vision</p>
+
+  <hr>
+
+  <!-- Problem 1 -->
+  <section>
+    <h2>Problem 1: Portrait Perspective Distortion</h2>
+
+    <img src="images/portrait_close.jpg" alt="Close-up portrait">
+    <img src="images/portrait_zoom.jpg" alt="Zoomed portrait">
+
+    <p>
+      The first image was taken from very close to the subject, causing perspective
+      distortion where facial features closer to the camera appear exaggerated.
+      In the second image, the camera was placed farther away and zoomed in to
+      maintain face size, which reduces perspective distortion and preserves
+      natural facial proportions.
+    </p>
+
+    <button onclick="vote('p1', 1)">👍</button>
+    <button onclick="vote('p1', -1)">👎</button>
+    <span id="p1">0</span>
+  </section>
+
+  <hr>
+
+  <!-- Problem 2 -->
+  <section>
+    <h2>Problem 2: Street Compression</h2>
+
+    <img src="images/street_zoom.jpg" alt="Zoomed street">
+    <img src="images/street_close.jpg" alt="Closer street view">
+
+    <p>
+      The zoomed-in image taken from far away appears flattened because perspective
+      differences across depth are reduced. When the camera is moved closer,
+      depth variation becomes more pronounced, making the scene appear less compressed.
+    </p>
+
+    <button onclick="vote('p2', 1)">👍</button>
+    <button onclick="vote('p2', -1)">👎</button>
+    <span id="p2">0</span>
+  </section>
+
+  <hr>
+
+  <!-- Problem 3 -->
+  <section>
+    <h2>Problem 3: Perspective vs Orthographic Projection</h2>
+
+    <img src="images/perspective.jpg" alt="Perspective projection">
+    <img src="images/orthographic.jpg" alt="Orthographic-like projection">
+
+    <p>
+      The first image demonstrates perspective projection where parallel lines converge.
+      The second image approximates orthographic projection by increasing camera distance
+      and zooming in, causing parallel edges to remain parallel.
+      Red lines highlight this difference.
+    </p>
+
+    <button onclick="vote('p3', 1)">👍</button>
+    <button onclick="vote('p3', -1)">👎</button>
+    <span id="p3">0</span>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
