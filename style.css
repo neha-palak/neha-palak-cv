@@ -82,7 +82,13 @@ body {
   color: #137333;
 }
 
+.status.progress {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
 .status.pending {
   background-color: #fce8e6;
   color: #a50e0e;
 }
+
