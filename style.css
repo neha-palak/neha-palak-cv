@@ -92,3 +92,47 @@ body {
   color: #a50e0e;
 }
 
+
+/* Assignment page content spacing */
+
+.content {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+/* Headings inside assignment pages */
+.content h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 26px;
+}
+
+.content h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+/* Paragraph spacing */
+.content p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Images in assignment pages */
+.content img {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Horizontal divider spacing */
+.content hr {
+  margin: 40px 0;
+}
