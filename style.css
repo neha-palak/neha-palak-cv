@@ -161,3 +161,20 @@ body {
     width: 100%;
   }
 }
+
+/* Image captions */
+
+.image-row figure {
+  width: 50%;
+  margin: 0;
+  text-align: center;
+}
+
+.image-row figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+
