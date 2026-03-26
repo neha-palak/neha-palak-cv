@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harris Detector</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<div class="container">
+
+  <div class="content">
+
+    
+
+    <h2>Part A: Harris Corner Detection</h2>
+    <a href="A2.html" class="back-link">← Back to Assignment 2</a>
+
+    <!-- ================= OBJECTIVE ================= -->
+    <h3>1. Objective</h3>
+    <p>
+      The goal of this part is to detect corners in an image using the Harris Corner Detector and evaluate its performance by comparing detected corners with manually annotated ground truth points.
+    </p>
+
+    <hr>
+
+    <!-- ================= ANNOTATION ================= -->
+    <h3>2. Ground Truth Annotation</h3>
+    <p>
+      Around 50 corner points were manually annotated on the image using a custom annotation tool. These points serve as ground truth for evaluating the detector.
+    </p>
+    <figure>
+        <img src="images2/building.jpeg" alt="Original Image">
+        <figcaption>Original Building Image</figcaption>
+    </figure>
+    
+
+    <hr>
+
+    <!-- ================= CORNER SCORE ================= -->
+    <h3>3. Corner Score (Harris Response)</h3>
+
+    <p>
+      The Harris detector computes a corner score for every pixel in the image, indicating how likely that pixel is to be a corner. Higher values correspond to stronger corner responses.
+    </p>
+
+    <p>
+      The corner score is stored as a matrix of values and visualized as an image, where brighter regions represent stronger corners.
+    </p>
+
+    <img src="images2/corner_scores.jpg" alt="Corner Score Image">
+    <figure>
+        <img src="images2/corner_scores.jpg" alt="Corner Score Image">
+        <figcaption>Corner Score Image</figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- ================= DETECTION ================= -->
+    <h3>4. Corner Detection</h3>
+
+    <p>
+      Corners are detected by thresholding the corner score. Pixels with values greater than a fraction of the maximum score are selected as corners.
+    </p>
+
+    <p>
+      Different threshold values were used to observe how detection changes.
+    </p>
+
+    <div class="image-row">
+      <figure>
+        <img src="images2/harris_0.01.jpg">
+        <figcaption>Threshold = 0.01 (many detections)</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images2/harris_0.05.jpg">
+        <figcaption>Threshold = 0.05 (fewer detections)</figcaption>
+      </figure>
+    </div>
+
+    <hr>
+
+    <!-- ================= EVALUATION ================= -->
+    <h3>5. Evaluation (Precision & Recall)</h3>
+
+    <p>
+      The detected corners were compared with ground truth points using a distance threshold. Based on this comparison:
+    </p>
+
+    <ul>
+      <li>True Positives (TP): Correctly detected corners</li>
+      <li>False Positives (FP): Incorrect detections</li>
+      <li>False Negatives (FN): Missed ground truth corners</li>
+    </ul>
+
+    <p>
+      Precision and Recall were computed as:
+    </p>
+
+    <ul>
+      <li>Precision = TP / (TP + FP)</li>
+      <li>Recall = TP / (TP + FN)</li>
+    </ul>
+
+    <hr>
+
+    <!-- ================= PR CURVE ================= -->
+    <h3>6. Precision-Recall Curve</h3>
+
+    <figure>
+        <img src="images2/pr_curve.png" alt="PR Curve">
+        <figcaption>Precision-Recall Curve</figcaption>
+    </figure>
+
+    <p>
+      ✔ Recall decreases from 0.97 to 0.64 as the threshold increases<br>
+      ✔ Precision increases from 0.002 to 0.008
+    </p>
+
+    <p>
+      This shows the expected trade-off: increasing the threshold reduces the number of detected corners, improving precision but lowering recall.
+    </p>
+
+    <hr>
+
+    <!-- ================= OBSERVATIONS ================= -->
+    <h3>7. Observations</h3>
+
+    <ul>
+      <li>Low threshold → many detected points → high recall but low precision</li>
+      <li>High threshold → fewer points → lower recall but better precision</li>
+      <li>The detector is able to identify most true corners but also produces many false positives</li>
+    </ul>
+
+    <hr>
+
+    <!-- ================= CHALLENGES ================= -->
+    <h3>8. Challenges</h3>
+
+    <p>
+      The Harris detector produces a large number of corner responses because it is sensitive to small intensity variations. As a result, it detects not only meaningful structural corners but also corners in textured and noisy regions.
+    </p>
+
+    <p>
+      This leads to high recall but very low precision, as many detected points do not correspond to actual corners.
+    </p>
+
+    <hr>
+
+    <!-- ================= CONCLUSION ================= -->
+    <h3>9. Conclusion</h3>
+
+    <p>
+      Harris Corner Detection successfully identifies corner-like structures in the image. However, due to its sensitivity to noise and texture, it produces many false positives. This results in high recall but low precision, highlighting the need for further filtering or more advanced feature detectors.
+    </p>
+
+  </div>
+
+</div>
+</body>
+</html>
