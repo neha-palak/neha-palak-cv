@@ -16,7 +16,7 @@
 
 
     <!-- ================= SIFT ================= -->
-    <h3>1. SIFT Keypoints & Features</h3>
+    <h3>SIFT Keypoints & Features</h3>
 
     <ul>
       <li>SIFT detects distinctive keypoints and computes feature descriptors for each image</li>
@@ -70,7 +70,7 @@
     <hr>
 
     <!-- ================= MATCHING ================= -->
-    <h3>2. Feature Matching</h3>
+    <h3>Feature Matching</h3>
 
     <ul>
       <li>Features are matched using Brute Force Matcher</li>
@@ -81,7 +81,76 @@
     <hr>
 
     <!-- ================= RESULTS ================= -->
-    <h3>3. Results & Observations</h3>
+    <h3>Consecutive Pair Matching Costs</h3>
+
+    <table style="width:100%; border-collapse: collapse; margin-top: 16px;">
+    <tr style="background-color:#f0f0f0;">
+        <th style="padding:8px; border:1px solid #ddd;">Pair</th>
+        <th style="padding:8px; border:1px solid #ddd;">Cost</th>
+    </tr>
+
+    <tr><td>0001 ↔ 0003</td><td>130.86</td></tr>
+    <tr><td>0003 ↔ 0005</td><td>126.77</td></tr>
+    <tr><td>0005 ↔ 0007</td><td>146.78</td></tr>
+    <tr><td>0007 ↔ 0009</td><td>147.77</td></tr>
+    <tr><td>0009 ↔ 0011</td><td>132.54</td></tr>
+    <tr><td>0011 ↔ 0013</td><td>144.50</td></tr>
+    <tr><td>0013 ↔ 0015</td><td>72.06</td></tr>
+    <tr><td>0015 ↔ 0017</td><td>174.20</td></tr>
+    <tr><td>0017 ↔ 0019</td><td>169.62</td></tr>
+    <tr><td>0019 ↔ 0021</td><td>163.04</td></tr>
+    <tr><td>0021 ↔ 0023</td><td>162.29</td></tr>
+    <tr><td>0023 ↔ 0025</td><td>159.73</td></tr>
+    <tr><td>0025 ↔ 0027</td><td>161.71</td></tr>
+    <tr><td>0027 ↔ 0029</td><td>175.56</td></tr>
+    <tr><td>0029 ↔ 0031</td><td>179.97</td></tr>
+    <tr><td>0031 ↔ 0033</td><td>167.48</td></tr>
+    <tr><td>0033 ↔ 0035</td><td>146.91</td></tr>
+    <tr><td>0035 ↔ 0037</td><td>184.89</td></tr>
+    <tr><td>0037 ↔ 0001</td><td>204.43</td></tr>
+    </table>
+
+    <h3>Random Pair Matching Costs</h3>
+
+    <table style="width:100%; border-collapse: collapse; margin-top: 16px;">
+    <tr style="background-color:#f0f0f0;">
+        <th style="padding:8px; border:1px solid #ddd;">Pair</th>
+        <th style="padding:8px; border:1px solid #ddd;">Cost</th>
+    </tr>
+
+    <tr><td>0021 ↔ 0023</td><td>162.29</td></tr>
+    <tr><td>0003 ↔ 0029</td><td>215.10</td></tr>
+    <tr><td>0001 ↔ 0037</td><td>269.46</td></tr>
+    <tr><td>0015 ↔ 0011</td><td>148.54</td></tr>
+    <tr><td>0005 ↔ 0021</td><td>219.17</td></tr>
+    <tr><td>0031 ↔ 0005</td><td>216.59</td></tr>
+    <tr><td>0011 ↔ 0033</td><td>198.66</td></tr>
+    <tr><td>0031 ↔ 0037</td><td>234.27</td></tr>
+    <tr><td>0009 ↔ 0003</td><td>189.63</td></tr>
+    <tr><td>0017 ↔ 0009</td><td>189.04</td></tr>
+    <tr><td>0001 ↔ 0013</td><td>212.38</td></tr>
+    <tr><td>0037 ↔ 0011</td><td>221.89</td></tr>
+    <tr><td>0029 ↔ 0021</td><td>210.51</td></tr>
+    <tr><td>0015 ↔ 0025</td><td>217.70</td></tr>
+    <tr><td>0015 ↔ 0027</td><td>210.30</td></tr>
+    <tr><td>0011 ↔ 0015</td><td>148.75</td></tr>
+    <tr><td>0003 ↔ 0001</td><td>128.84</td></tr>
+    <tr><td>0025 ↔ 0003</td><td>208.00</td></tr>
+    <tr><td>0017 ↔ 0011</td><td>166.11</td></tr>
+    </table>
+
+    <h3>Final Result</h3>
+
+    <p>
+    Average Consecutive Cost: <strong>155.32</strong><br>
+    Average Random Cost: <strong>198.27</strong>
+    </p>
+
+    <p>
+    <strong>Conclusion:</strong> Consecutive pairs have lower matching cost due to higher visual similarity.
+    </p>
+
+    <h3>Observations</h3>
 
     <ul>
       <li><strong>Overall:</strong> Most consecutive pairs have similar costs → due to smooth camera movement and high overlap</li>
