@@ -202,3 +202,11 @@ a.back-link:hover {
   border-radius: 6px;
   border: 1px solid #ddd;
 }
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
