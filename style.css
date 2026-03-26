@@ -178,3 +178,14 @@ body {
 }
 
 
+a.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #1a4ed8;
+  font-weight: 600;
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+}
