@@ -23,9 +23,50 @@
       <li>Keypoints are concentrated on edges and textured regions</li>
       <li>These features are used for matching across images</li>
     </ul>
+    <h4>4. Challenges & Improvements</h3>
 
-    <img src="sift_keypoints_example.jpg" alt="SIFT Keypoints">
+    <p>
+    Initially, SIFT detected a very large number of keypoints (in the range of 10,000–20,000 per image), many of which were from noisy or less informative regions.
+    </p>
 
+    <figure>
+        <img src="images2/sift_keypoints_example.jpg" alt="SIFT Keypoints">
+        <figcaption>Dense SIFT Keypoints</figcaption>
+
+    </figure>
+    <p>
+    To improve matching quality and reduce noise, we filtered the keypoints by selecting only the top 500 based on their response values. This resulted in more stable and meaningful feature matching.
+    </p>
+    
+
+    <h3>SIFT Keypoints for All Images</h3>
+
+    <div class="horizontal-scroll">
+    <img src="images2/sift_oyla_0001.jpg">
+    <img src="images2/sift_oyla_0003.jpg">
+    <img src="images2/sift_oyla_0005.jpg">
+    <img src="images2/sift_oyla_0007.jpg">
+    <img src="images2/sift_oyla_0009.jpg">
+    <img src="images2/sift_oyla_0011.jpg">
+    <img src="images2/sift_oyla_0013.jpg">
+    <img src="images2/sift_oyla_0015.jpg">
+    <img src="images2/sift_oyla_0017.jpg">
+    <img src="images2/sift_oyla_0019.jpg">
+    <img src="images2/sift_oyla_0021.jpg">
+    <img src="images2/sift_oyla_0023.jpg">
+    <img src="images2/sift_oyla_0025.jpg">
+    <img src="images2/sift_oyla_0027.jpg">
+    <img src="images2/sift_oyla_0029.jpg">
+    <img src="images2/sift_oyla_0031.jpg">
+    <img src="images2/sift_oyla_0033.jpg">
+    <img src="images2/sift_oyla_0035.jpg">
+    <img src="images2/sift_oyla_0037.jpg">
+    </div>
+    <p>Now, for all the keypoints:</p>
+    <ul>
+        <li>Filtered keypoints: 500</li>
+        <li>Descriptors shape: (500, 128)</li>
+    </ul>
     <hr>
 
     <!-- ================= MATCHING ================= -->

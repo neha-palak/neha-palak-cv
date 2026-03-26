@@ -189,3 +189,16 @@ a.back-link {
 a.back-link:hover {
   text-decoration: underline;
 }
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.horizontal-scroll img {
+  height: 180px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
