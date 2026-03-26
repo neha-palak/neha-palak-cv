@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIFT Matching</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<div class="container">
+
+  <div class="content">
+    <h2>Part B: SIFT Feature Matching</h2>
+
+    <h3>1. SIFT Keypoints & Features</h3>
+    <p>
+      SIFT extracts keypoints and descriptors for each image. Keypoints are concentrated on edges and textured regions and are used for feature matching.
+    </p>
+
+    <img src="sift_keypoints_example.jpg" alt="SIFT Keypoints">
+
+    <hr>
+
+    <h3>2. Feature Matching</h3>
+    <p>
+      Features are matched using a Brute Force Matcher with KNN matching. Lowe’s ratio test is applied to remove weak matches. Matching cost is defined as the average distance of good matches.
+    </p>
+
+    <hr>
+
+    <h3>3. Results & Observations</h3>
+    <p>
+      Consecutive image pairs have similar costs due to smooth camera movement. The pair (0013–0015) has very low cost as the images are nearly identical. The pair (0037–0001) has the highest cost due to large viewpoint difference. Lower cost indicates higher similarity between images.
+    </p>
+
+    <p><strong>Conclusion:</strong> Consecutive image pairs have lower matching cost due to higher visual similarity.</p>
+
+  </div>
+
+</div>
+</body>
+</html>
