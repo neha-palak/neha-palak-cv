@@ -11,27 +11,48 @@
 
   <div class="content">
     <h2>Part B: SIFT Feature Matching</h2>
+    <a href="A2.html" class="back-link">← Back to Assignment 2</a>
 
+
+
+    <!-- ================= SIFT ================= -->
     <h3>1. SIFT Keypoints & Features</h3>
-    <p>
-      SIFT extracts keypoints and descriptors for each image. Keypoints are concentrated on edges and textured regions and are used for feature matching.
-    </p>
+
+    <ul>
+      <li>SIFT detects distinctive keypoints and computes feature descriptors for each image</li>
+      <li>Keypoints are concentrated on edges and textured regions</li>
+      <li>These features are used for matching across images</li>
+    </ul>
 
     <img src="sift_keypoints_example.jpg" alt="SIFT Keypoints">
 
     <hr>
 
+    <!-- ================= MATCHING ================= -->
     <h3>2. Feature Matching</h3>
-    <p>
-      Features are matched using a Brute Force Matcher with KNN matching. Lowe’s ratio test is applied to remove weak matches. Matching cost is defined as the average distance of good matches.
-    </p>
+
+    <ul>
+      <li>Features are matched using Brute Force Matcher</li>
+      <li>KNN matching with ratio test removes weak matches</li>
+      <li>Matching cost is defined as average distance of good matches</li>
+    </ul>
 
     <hr>
 
+    <!-- ================= RESULTS ================= -->
     <h3>3. Results & Observations</h3>
-    <p>
-      Consecutive image pairs have similar costs due to smooth camera movement. The pair (0013–0015) has very low cost as the images are nearly identical. The pair (0037–0001) has the highest cost due to large viewpoint difference. Lower cost indicates higher similarity between images.
-    </p>
+
+    <ul>
+      <li><strong>Overall:</strong> Most consecutive pairs have similar costs → due to smooth camera movement and high overlap</li>
+
+      <li><strong>Very Low Cost:</strong> (0013–0015) has very low cost → images are almost identical → strong matches</li>
+
+      <li><strong>Higher Cost:</strong> Some pairs show higher cost → due to viewpoint change and reduced overlap</li>
+
+      <li><strong>Highest Cost:</strong> (0037–0001) has highest cost → start and end images are very different</li>
+
+      <li><strong>Key Insight:</strong> Lower cost = more similar images, Higher cost = less similarity</li>
+    </ul>
 
     <p><strong>Conclusion:</strong> Consecutive image pairs have lower matching cost due to higher visual similarity.</p>
 
